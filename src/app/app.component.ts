@@ -9,5 +9,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Question4';
+  textLength: number = 0;
+
+  onInput(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    this.textLength = inputElement.value.length;
+  }
 }
